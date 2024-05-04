@@ -1,0 +1,212 @@
+<body class="body">
+  <div class="container">
+    <form [formGroup]="registrationForm" class="registration-form">
+      <h3>Registration Form</h3>
+      <div class="f-content">
+        <label for="photo">Photo:</label>
+        <input
+          type="file"
+          formControlName="photo"
+          (change)="onPhotoChange($event)"
+        />
+        <img
+          *ngIf="photoPreview"
+          [src]="photoPreview"
+          alt="Photo Preview"
+          class="preview-img"
+        />
+      </div>
+
+      <div class="f-content">
+        <label for="firstName">First Name:</label>
+        <input
+          type="text"
+          id="firstName"
+          formControlName="firstName"
+          placeholder="First name"
+        />
+        <span
+          *ngIf="registrationForm.get('firstName')?.errors?.['pattern']"
+          class="error"
+          >Enter only alphabets with a maximum length of 20 characters</span
+        >
+        <span
+          *ngIf="registrationForm.get('firstName')?.touched && registrationForm.get('firstName')?.errors?.['required']"
+          class="error"
+          >First Name is required</span
+        >
+      </div>
+
+      <div class="f-content">
+        <label for="lastName">Last Name:</label>
+        <input
+          type="text"
+          id="lastName"
+          formControlName="lastName"
+          placeholder="Last name"
+        />
+        <span
+          *ngIf="
+            registrationForm.get('lastName')?.touched &&
+            registrationForm.get('lastName')?.errors
+          "
+          class="error"
+          >Last Name is required</span
+        >
+      </div>
+
+      <div class="f-content">
+        <label for="Email">Email:</label>
+        <input
+          type="email"
+          id="Email"
+          formControlName="email"
+          placeholder="Email"
+        />
+        <span
+          *ngIf="
+            registrationForm.get('email')?.touched &&
+            registrationForm.get('email')?.errors
+          "
+          class="error"
+          >Email is required</span
+        >
+      </div>
+
+      <div class="f-content">
+        <label for="mobile">Mobile No:</label>
+        <input
+          type="text"
+          id="mobile"
+          name="mobile"
+          (input)="onInputChange($event)"
+          max="10"
+          formControlName="mobile"
+        />
+      </div>
+
+      <div class="f-content">
+        <label for="age">Age:</label>
+        <div class="slider-container">
+          <input
+            type="range"
+            id="age"
+            min="18"
+            max="100"
+            formControlName="age"
+          />
+          <span>{{ registrationForm.get("age")?.value }}</span>
+          <span
+            *ngIf="
+              registrationForm.get('age')?.touched &&
+              registrationForm.get('age')?.errors
+            "
+            class="error"
+            >Age is required</span
+          >
+        </div>
+      </div>
+
+      <div class="f-content">
+        <label for="state">State:</label>
+        <select id="state" formControlName="state">
+          <option value="">Select State</option>
+
+          <option *ngFor="let state of states" [value]="state">
+            {{ state }}
+          </option>
+        </select>
+      </div>
+
+      <div class="f-content">
+        <label for="country">Country:</label>
+        <select id="country" formControlName="country">
+          <option value="">Select Country</option>
+
+          <option *ngFor="let country of countries" [value]="country">
+            {{ country }}
+          </option>
+        </select>
+      </div>
+
+      <div class="f-content">
+        <label for="addressType">Address Type:</label><br />
+        <select
+          id="addressType"
+          formControlName="addressType"
+          (change)="toggleAddressFields()"
+        >
+          <option value="Home">Home</option>
+          <option value="Company">Company</option>
+        </select>
+        <span
+          *ngIf="
+            registrationForm.get('addressType')?.touched &&
+            registrationForm.get('addressType')?.errors
+          "
+          class="error"
+          >Address is required</span
+        >
+      </div>
+
+      <div *ngIf="registrationForm.get('addressType')?.value === 'Home'">
+        <input
+          type="text"
+          class="add1"
+          formControlName="address1"
+          placeholder="Home Address1"
+        />
+
+        <input
+          type="text"
+          class="add2"
+          formControlName="address2"
+          placeholder="Home Address2"
+        />
+      </div>
+
+      <div *ngIf="registrationForm.get('addressType')?.value === 'Company'">
+        <input
+          type="text"
+          class="add1"
+          formControlName="companyAddress1"
+          placeholder="Company Address1"
+        />
+
+        <input
+          type="text"
+          class="add2"
+          formControlName="companyAddress2"
+          placeholder="Company Address2"
+        />
+      </div>
+
+      <div class="f-content">
+        <label for="interest">Interest:</label><br />
+        <input
+          type="text"
+          id="interest"
+          formControlName="interest"
+          placeholder="Interest"
+        />
+        <span
+          *ngIf="
+            registrationForm.get('interest')?.touched &&
+            registrationForm.get('interest')?.errors
+          "
+          class="error"
+          >Interest is required</span
+        >
+      </div>
+
+      <div class="f-content buttons">
+        <button type="button" class="submit-button" (click)="submitForm()">
+          Submit
+        </button>
+        <button type="button" class="cancel-button" (click)="cancel()">
+          Cancel
+        </button>
+      </div>
+    </form>
+  </div>
+</body>

@@ -1,0 +1,80 @@
+
+.form{
+    margin-left: 400px;
+    margin-top: 50px;
+  }
+  .profile-content {
+    max-width: 200px; 
+  
+    
+    h2 {
+      color: #bb46c1; 
+      font-size: 40px; 
+      margin-bottom: 30px; 
+      margin-left: 110px;
+      display: flex;
+      text-align: center;
+      font-style: oblique;
+    }
+    
+    .user-profile {
+      display: flex;
+   
+      width: 10px;
+      height: 10px;
+      
+      .user-photo {
+        margin-right: 100px; 
+        text-align: center;
+        
+        .image {
+          width: 150px; 
+          height: auto; 
+          border-radius: 10%; 
+        }
+        
+        .button-container {
+          margin-top: 10px; 
+          display: flex;
+          margin-top: 50px;
+          margin-left: 30px;
+          
+          .edit-photo-btn,
+          .edit-profile-btn {
+            background-color: #41b00e; 
+            color: #fff; 
+            border:1px solid orange; 
+            padding:  1px 20px; 
+            margin-right: 10px;
+            cursor: pointer; 
+            border-radius: 15%;
+          justify-content: center;
+            display: flex;
+          }
+        }
+      }
+      
+      .profile-description {
+        text-align:justify;
+        width: 400px;
+        .email {
+          font-weight: bold; 
+          color: #007bff;
+        }
+        
+        .agree-btn {
+          background-color: #b8e6c3;
+          color: #fff; 
+         
+          padding: 10px 20px;
+          margin-top: 20px; 
+          cursor: pointer; 
+         
+          &:hover {
+            background-color: #218838; 
+          }
+        }
+      }
+    }
+  }
+

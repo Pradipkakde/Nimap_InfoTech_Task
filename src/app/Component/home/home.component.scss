@@ -1,0 +1,111 @@
+
+/* Start form  attributes */
+form {
+    width: 400px;
+    min-height: 450px;
+   
+    height: auto;
+    border-radius: 10px;
+    margin: 5% auto;
+    box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+   
+    background-image: linear-gradient(-225deg, #92eacf 50%, #f184db 50%);
+}
+/* form Container */
+form .con {
+    display: -webkit-flex;
+   
+  
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+  
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    
+  
+    
+}
+
+/* the header form form */
+header {
+    margin: 4% auto 10% auto;
+    text-align: center;
+}
+/* Login title form form */
+header img{
+    width: 200px;
+    height: 100px;
+}
+
+header p {
+    letter-spacing: 0.05em;
+}
+
+/* Submits */
+.register-btn {
+    width: 98%;
+   
+    float: left;
+    margin-left: 2%;
+    background: #B8F2E6;
+    background: #749caa;
+    border-radius:10px;
+    color: #fff;
+    margin: 7% auto;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+    border: none;
+    width: 200px;
+    height: 50px;
+    margin-top: 50px;
+    box-shadow: 0 0 5px cyan,0  3px cyan;
+  
+}
+
+.search{
+    --padding:1px;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding: var(--padding);
+    border-radius: 28px;
+    background: #f6f6f6;
+    transition:box-shadow 0.25s;
+    box-shadow: 0 0 5px rgb(255, 0, 153),0 0 3px cyan;
+  
+}
+.search i{
+    margin-left: 10px;
+}
+.search:focus-within{
+    box-shadow: 0 0 3px rgba(0,0,0,0.75);
+}
+.search-input{
+    font-family:'Lexend',sans-serif;
+    color: #333333;
+    margin-left: 14px;
+    margin-left: var(--padding);
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 250px;
+    
+}
+
+.search-input::placeholder,.search-icon{
+    color: rgba(51, 46, 46, 0.25);
+}
+
+
+
+#search-button {
+    background-color: #8accba;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+  }

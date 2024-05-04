@@ -1,0 +1,145 @@
+
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    margin: 0;
+   
+    
+  }
+  
+  .container {
+    width: 30%; 
+    height: 10%;
+  }
+  
+  .registration-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding:20px;
+    border: 1px solid #cb8a8a;
+    border-radius: 8px; 
+    margin-top:-120px;
+    width: 120%;
+   
+  }
+  .registration-form h3{
+    color: #4CAF50;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 28px;
+    margin-left: 30px;
+    border:#4CAF50 solid 1px;
+    padding: 1%;
+    border-radius: 5px;
+   
+  }
+  
+  .f-content {
+  
+    width: 100%;
+  }
+  
+  .f-content label {
+    width: 100px; 
+    display: inline-block;
+  }
+  
+  .photo-container {
+    position:fixed;
+   
+  }
+  
+  .photo-container input[type="file"] {
+    margin-right: 10px;
+   
+  }
+  
+  .preview-img {
+    max-width: 90px; 
+    border: #4CAF50 solid 2px;
+    border-radius: 10%;
+    margin-left: 30%;
+    
+   
+  }
+  
+  .large-preview-img {
+    max-width: 10px; 
+    margin-bottom: 10px; 
+    
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content:space-between;
+    width: 100%;
+    margin-top: 3px;
+  }
+  
+  .submit-button, .cancel-button {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submit-button {
+    background-color: #4CAF50;
+    color: white;
+    margin-top: 5%;
+  }
+  
+  .cancel-button {
+    background-color: #f44336;
+    color: white;
+    margin-top: 5%;
+    flex-direction: row;
+  }
+  
+  .f-content .slider-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  
+  .f-content .slider-container input[type="range"] {
+    
+    width: 100%;
+    
+  }
+  
+  
+  .f-content input[type="text"],
+  .f-content input[type="email"],
+  .f-content input[type="tel"],
+  .f-content input[type="file"] {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom:2px;
+  }
+  
+  .f-content select {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom:2px;
+  }
+  
+  
+   .add1 {
+    border-radius:5px;    
+  
+  }
+  .add2 {
+    border-radius:5px;
+  }

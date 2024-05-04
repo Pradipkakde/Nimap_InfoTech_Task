@@ -1,0 +1,35 @@
+<div class="form">
+  <div class="profile-content">
+    <h2>USER PROFILE</h2>
+    <div class="user-profile">
+      <div class="user-photo">
+        <img
+          [src]="user?.photo"
+          alt="User Photo"
+          class="image"
+        />
+        <div class="button-container">
+          <button class="edit-photo-btn" (click)="editPhoto()">
+            Edit Photo
+          </button>
+          <button class="edit-profile-btn" (click)="editProfile()">
+            Edit Profile
+          </button>
+        </div>
+      </div>
+      <div class="profile-description">
+        <p *ngIf="user">
+          I'm {{ user?.firstName }} {{ user?.lastName }} and I'm above
+          {{ user?.age }} years.and You can send your emails to
+          <span class="email">{{ user?.email }}</span
+          >. I live in the state of {{ user?.state }} and country
+          {{ user?.country }}.I like to {{ user?.interest }}.And please send me
+          the newsletters.Please reach out to me on my phone number{{
+            user?.mobile
+          }}.
+        </p>
+        <button class="btn btn-success" routerLink="/home">I Agree</button>
+      </div>
+    </div>
+  </div>
+</div>
